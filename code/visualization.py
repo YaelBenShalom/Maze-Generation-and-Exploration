@@ -58,10 +58,10 @@ class App:
         pygame.init()
         self._display = pygame.display.set_mode((self.windowWidth,self.windowHeight), pygame.HWSURFACE)
         self._running = True
-        self.robotImage = pygame.image.load("robot.png").convert_alpha()
-        self.blockImage = pygame.image.load("block.png").convert_alpha()
-        self.startImage = pygame.image.load("start.png").convert_alpha()
-        self.goalImage = pygame.image.load("goal.png").convert_alpha()
+        self.robotImage = pygame.image.load("images/robot.png").convert_alpha()
+        self.blockImage = pygame.image.load("images/block.png").convert_alpha()
+        self.startImage = pygame.image.load("images/start.png").convert_alpha()
+        self.goalImage = pygame.image.load("images/goal.png").convert_alpha()
     
     def render(self, step):
         self._display.fill((0,0,0))

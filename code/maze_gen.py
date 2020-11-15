@@ -8,18 +8,17 @@ class Maze:
         self.frontier_list = []
         self.init_matrix = []
 
+
     def maze_generator(self):
     # creating an initial matrix of ones
-        self.init_matrix = numpy.ones((self.m,self.n), dtype=int)
+        self.init_matrix = -1*numpy.ones((self.m,self.n), dtype=int)
+
 
     #randomly selecting a starting position and adding 2-hop neigbors to frontier_list
         start_array = (random.randrange(self.m), random.randrange(self.n))
         self.init_matrix[start_array] = 0
-#        print("initial matrix:")
-#        print (self.init_matrix)
         self.update_frontier_list(start_array[0], start_array[1])
-#        print ("frontier_list:")
-#        print (self.frontier_list)
+
 
     # iterating through the frontier_list
         while self.frontier_list:
@@ -39,14 +38,14 @@ class Maze:
             if add_to_frontier_list and add_to_frontier_list not in self.frontier_list:
                 self.frontier_list.append(add_to_frontier_list)
             self.frontier_list.remove(random_frontier)
-#            print("adding to the frontier list:")   
-#            print (self.frontier_list)
-        print (self.init_matrix)
+        return(self.init_matrix)
+
 
     def middle_cell(self, first_array, second_array): 
         #finding the middle cell between the frontier cell and the neighbor cell
         middle_array = [int((first_array[0] + second_array[0])/2), int((first_array[1] + second_array[1])/2)]
         return middle_array
+
 
     def update_frontier_list(self, xcell, ycell):
         #updating the frontier list with the frontier cells
@@ -76,8 +75,7 @@ class Maze:
 
 def main():
     maze = Maze(11, 31)
-    maze.maze_generator()
-    # print(maze)
+    maze = maze.maze_generator()
 
 
 if __name__ == "__main__":
