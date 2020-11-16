@@ -5,7 +5,7 @@ GitHub repository - https://github.com/YaelBenShalom/Python_a-Maze-ing_Challenge
 In this project, me and my team created a maze exploration software.
 A simulated robotic agent takes discrete steps on a grid in the maze, while trying to navigate to a goal.
 
-## Pseudo code:
+## Maze Generation Pseudo Code:
 1. A Grid consists of a 2 dimensional array of cells.
 2. A Cell has 2 states: Blocked or Passage.
 3. Start with a Grid full of Cells in state Blocked.
@@ -33,5 +33,5 @@ Maze generation for 31x11 grid:
 
 3. To cange the grid, change the hight and weight parameters on `maze_game.py` file:
 
-Maze generation for 21x13 grid:
-![Maze generation 21x13](https://github.com/YaelBenShalom/Python_a-Maze-ing_Challenge/blob/master/videos/maze2.gif)
+Maze generation for 20x13 grid:
+![Maze generation 20x13](https://github.com/YaelBenShalom/Python_a-Maze-ing_Challenge/blob/master/videos/maze2.gif)
