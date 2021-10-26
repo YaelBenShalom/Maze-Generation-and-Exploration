@@ -22,7 +22,8 @@ def main():
     theWFP = wavefrontp.WFP(M, N, maze, start, goal)
     theWFP.execute()
 
-    theApp = visualization.App(M, N, start, goal, maze, theWFP.solution, theWFP.nos)
+    theApp = visualization.App(
+        M, N, start, goal, maze, theWFP.solution, theWFP.nos)
     theApp.on_execute()
 
 

@@ -1,5 +1,6 @@
 import copy
 
+
 class WFP:
     def __init__(self, M, N, maze, start, goal):
         self.M = M
@@ -24,7 +25,6 @@ class WFP:
         else:
             return True
 
-
     def generate_map(self):
         curX = self.goal[0]
         curY = self.goal[1]
@@ -46,10 +46,9 @@ class WFP:
                 next = [nX, nY, cur[2] + 1]
                 cellist.append(next)
 
-
     def generate_route(self):
         route = []
-        curP = [self.start[0],self.start[1]]
+        curP = [self.start[0], self.start[1]]
         route.append(curP[:])
         while (not (curP[0] == self.goal[0] and curP[1] == self.goal[1])):
             pstate = []
@@ -64,13 +63,11 @@ class WFP:
             curP[0] = curP[0] + self.dx[p]
             curP[1] = curP[1] + self.dy[p]
             route.append(curP[:])
-        
+
         for step in route:
             self.nos += 1
             self.solution[step[1]][step[0]] = self.nos
 
-    
     def execute(self):
         self.generate_map()
         self.generate_route()
-        

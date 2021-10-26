@@ -1,12 +1,13 @@
 import numpy
 m = 3
 n = 3
-walls = [(0,2), (1,1), (2,2)]
-start = (2,1)
-goal = (0,1)
+walls = [(0, 2), (1, 1), (2, 2)]
+start = (2, 1)
+goal = (0, 1)
+
 
 def testingMatrix(m, n, walls):
-    init_matrix = numpy.zeros([m,n])
+    init_matrix = numpy.zeros([m, n])
     # i = 0
 
     for i in walls:
@@ -17,14 +18,11 @@ def testingMatrix(m, n, walls):
     return init_matrix
 
 
-
-# for (x,y) in walls: 
+# for (x,y) in walls:
 #     init_matrix(x,y) = 1
-
-
 testingMatrix(m, n, walls)
 
 
-#for x in array:
+# for x in array:
 
-#for (x = 0; x < len(array); i+)
+# for (x = 0; x < len(array); i+)

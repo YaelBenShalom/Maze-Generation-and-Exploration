@@ -1,5 +1,6 @@
 import copy
 
+
 class RBT:
     def __init__(self, M, N, maze, start, goal):
         self.M = M
@@ -13,7 +14,7 @@ class RBT:
     def isFree(self, cell):
         x = cell[0]
         y = cell[1]
-        if x >= 0 and x < self.M and y >=0 and y < self.N and self.maze[y][x] == 0:
+        if x >= 0 and x < self.M and y >= 0 and y < self.N and self.maze[y][x] == 0:
             return True
         return False
 
