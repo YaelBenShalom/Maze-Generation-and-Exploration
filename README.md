@@ -1,4 +1,4 @@
-# Python "a-Maze-ing" Challenge
+# Maze Generation and Exploration
 
 
 ## Table of Contents
